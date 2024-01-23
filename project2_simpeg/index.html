@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/login.css">
+    <style>
+      body {
+        background-image: url(gambar/5305323.jpg);
+        margin: 30px;
+      }
+
+      .login-box-body {
+        background: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .btn-block {
+        font-size: 15px;
+      }
+
+      .login-box-msg {
+        font-size: 20px;
+      }
+
+      /* Responsive Styles */
+      @media (min-width: 768px) {
+        .login-box-body {
+          padding: 80px;
+        }
+
+        .login-text {
+          margin-top: 13%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="login">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 login-text">
+              <h2>Wellcome to SIMPEG NURUL FIKRI</h2>
+              <p>
+                Sistem Informasi yang dirancang untuk menangani berbagai hal dalam pengurusan kepegawaian mulai dari pengisian, pengolahan dan pemusatan data secara terkomputerisasi sehingga dapat menangani berbagai laporan yang berhubungan dengan kepegawaian.
+              </p>
+          </div>
+          <div class="col-md-6">
+            <div class="login-box">
+              <div class="login-box-body">
+                <p class="login-box-msg text-center">Silahkan Login</p>
+                <form action="#" method="post">
+                  <div class="form-group has-feedback">
+                    <label for="username">Username:</label>
+                    <input
+                      type="text"
+                      id="username"
+                      class="form-control"
+                      placeholder="Enter your username"
+                    />
+                    <span
+                      class="glyphicon glyphicon-user form-control-feedback"
+                    ></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <label for="password">Password:</label>
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="Enter your password"
+                    />
+                    <span
+                      class="glyphicon glyphicon-lock form-control-feedback"
+                    ></span>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="checkbox icheck">
+                        <label> <input type="checkbox" /> Remember Me </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-block btn-flat"
+                        onclick="login()"
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </div>
+                  <p class="mb-1">
+                    <a href="pages/forgot.html">Forgot Password?</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+      function login() {
+        // Ambil nilai username dan password
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        if (username === "admin" && password === "admin123") {
+          alert("Login Berhasil");
+          // Redirect ke halaman lain setelah login berhasil
+          window.location.href = "pages/dashboard.html";
+        } else {
+          alert("Login Gagal.");
+        }
+      }
+    </script>
+  </body>
+</html>
